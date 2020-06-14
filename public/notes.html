@@ -15,7 +15,7 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
 
   <body>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-8">
           <input
-            class="noteTitle"
+            class="noteTitle note-title"
             placeholder="Note Title"
             maxlength="28"
             type="text"
@@ -46,9 +46,13 @@
           ></textarea>
         </div>
       </div>
+      <div class="showNote hide">
+        <h3 class="showTitle"></h3>
+        <p class="showText"></p>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/assets/js/index.js"></script>
-    <script src="../script.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
