@@ -18,23 +18,23 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
-// Display notes page
+// Display notes page thats takes and displays our NOTES
 app.get("/notes", function (req, res) {
   res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
-// Displays all characters
-app.get("/api/characters", function (req, res) {
-  return res.json(characters);
+// Displays all notes
+app.get("/api/notes", function (req, res) {
+  return res.json(notes);
 });
 
 // Displays a single note, or returns false
 app.get("/api/notes/:note", function (req, res) {
-  var chosen = req.params.note;
+  let chosen = req.params.note;
 
   console.log(chosen);
 
-  for (var i = 0; i < notes.length; i++) {
+  for (let i = 0; i < notes.length; i++) {
     if (chosen === notes[i].routeName) {
       return res.json(notes[i]);
     }
@@ -45,11 +45,8 @@ app.get("/api/notes/:note", function (req, res) {
 
 // Create NEW Note - takes in JSON input
 app.post("/api/notes", function (req, res) {
-  var noteTaken = req.body;
-
-  // Using a RegEx Pattern to remove spaces from noteTaken
-  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  noteTaken.routeName = noteTaken.name.replace(/\s+/g, "").toLowerCase();
+  let noteTaken = req.body;
+  noteTaken.routeName = noteTaken.title.replace(/\s+/g, "").toLowerCase();
 
   console.log(noteTaken);
 
