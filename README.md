@@ -8,7 +8,7 @@
 
 #### How to contribute: N/a
 
-[![Generic badge](https://img.shields.io/badge/-Example-<COLOR>.svg)](https://avatars0.githubusercontent.com/u/62309/830?v=4)
+[![Generic badge](https://img.shields.io/badge/-Example-<COLOR>.svg)](develop/public/assets/NoteTaker.gif)
 
 [![Generic badge](https://img.shields.io/badge/-Github-<COLOR>.svg)](https://github.com/daviddcarmon)
 
