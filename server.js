@@ -84,20 +84,20 @@ app.delete("/api/notes/:id", function (req, res) {
 
 ///////////// HTML GET Requests \\\\\\\\\\\\\\\\\\\\
 // Web page when the Get started button is clicked\\\
-app.get("/notes", function (req, res) {
+app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "Develop/public/notes.html"));
 });
 
 //// If no matching route is found default to home \\\\
-app.get("*", function (req, res) {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "Develop/public/index.html"));
 });
 
-app.get("/api/notes", function (req, res) {
+app.get("/api/notes", (req, res) => {
   return res.sendFile(path.json(__dirname, "Develop/db/db.json"));
 });
 
 // Start the server on the port
-app.listen(PORT, function () {
+app.listen(PORT, () => {
   console.log(`App listening on PORT http://localhost:${PORT}`);
 });
